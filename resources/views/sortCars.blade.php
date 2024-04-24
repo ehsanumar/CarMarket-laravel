@@ -48,7 +48,7 @@
                     <p>year: {{ $product->year}}</p>
                     <p>details: {{ $product->details}}</p>
                     <div class="card-actions justify-end">
-                        <a href=""
+                        <a href="{{ route('cars.show', $product->id) }}"
                             class="btn btn-primary text-white">Details</a>
                     </div>
                 </div>
