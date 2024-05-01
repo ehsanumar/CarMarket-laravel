@@ -23,19 +23,30 @@
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             @auth
                                 <a href="{{ route('dashboard') }}"
-                                    class="text-gray-100  hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium">Dashboard</a>
+                                    class="text-gray-100  hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium">@lang('message.dashboard')</a>
                             @else
                                 <a href="{{ route('login') }}"
-                                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Login</a>
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">@lang('message.login')</a>
                                 <a href="{{ route('register') }}"
-                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</a>
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.register')</a>
                             @endauth
-                    <a href="{{ route('cars.create') }}"  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Cars</a>
+                            <a href="{{ route('cars.create') }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.cars')</a>
 
                             <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.about')</a>
                             <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.contact')</a>
+
+                            <a href="{{ route('locale',['lang' => 'ckb']) }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kurdish</a>
+
+                            <a href="{{ route('locale',['lang' => 'ar']) }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Arabic</a>
+
+                            <a href="{{ route('locale',['lang' => 'en']) }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">English</a>
+
                         </div>
                     </div>
                 </div>

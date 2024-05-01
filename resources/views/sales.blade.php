@@ -16,7 +16,7 @@
                             <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                                 <div class="text-center justify-center  mx-auto mt-20">
                                     <p class="text-white bg-red-600 px-8 py-4 rounded-lg text-lg"> <span
-                                            class="text-xl"> Total Sales :</span> ${{ number_format($Total, 2, ',', '.') }}
+                                            class="text-xl"> @lang('message.Total Sales ') :</span> ${{ number_format($Total, 2, ',', '.') }}
                                     </p>
                                 </div>
                                 <div class="overflow-hidden">

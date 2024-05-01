@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SalesController;
@@ -51,6 +52,7 @@ Route::group(['middleware' => ['role:super-admin', 'auth']], function () {
 Route::resource('sales', SalesController::class);
 Route::get('/search/car', [SearchAndSearchController::class, 'searchCar'])->name('searchCar');
 Route::get('/sort/car', [SearchAndSearchController::class, 'sortCar'])->name('sortCar');
+Route::get('/locale/{lang}', [LocaleController::class, 'setLocale'])->name('locale');
 
 
 require __DIR__.'/auth.php';
