@@ -36,18 +36,19 @@
                             <a href="#"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.about')</a>
                             <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.contact')</a>
- <select name="" id="">
-    <option value=""> <a href="{{ route('locale',['lang' => 'ckb']) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kurdish</a></option>
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.contact')</a> <select id="languageSelector">
+        <option value="ckb">Kurdish</option>
+        <option value="ar">Arabic</option>
+        <option value="en">English</option>
+    </select>
 
-                        <option value="">     <a href="{{ route('locale',['lang' => 'ar']) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Arabic</a></option>
-
-                       <option value="">      <a href="{{ route('locale',['lang' => 'en']) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">English</a></option>
-
- </select>
+    <script>
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const selectedLang = this.value;
+            const url = `{{ url('locale') }}/${selectedLang}`;
+            window.location.href = url;
+        });
+    </script>
 
                         </div>
                     </div>

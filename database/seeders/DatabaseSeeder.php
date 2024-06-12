@@ -34,7 +34,6 @@ class DatabaseSeeder extends Seeder
             'password' => '12121212', // Replace with a strong password
             'email' => 'arkan@gmail.com',
             'phone' => '09123456789',
-            'type' => 'super-admin'
         ]);
 
         $user->assignRole('super-admin');
