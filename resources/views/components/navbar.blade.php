@@ -37,15 +37,17 @@
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.about')</a>
                             <a href="#"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">@lang('message.contact')</a>
+ <select name="" id="">
+    <option value=""> <a href="{{ route('locale',['lang' => 'ckb']) }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kurdish</a></option>
 
-                            <a href="{{ route('locale',['lang' => 'ckb']) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kurdish</a>
+                        <option value="">     <a href="{{ route('locale',['lang' => 'ar']) }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Arabic</a></option>
 
-                            <a href="{{ route('locale',['lang' => 'ar']) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Arabic</a>
+                       <option value="">      <a href="{{ route('locale',['lang' => 'en']) }}"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">English</a></option>
 
-                            <a href="{{ route('locale',['lang' => 'en']) }}"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">English</a>
+ </select>
 
                         </div>
                     </div>

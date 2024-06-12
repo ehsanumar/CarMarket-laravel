@@ -2,11 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Cars;
-use App\Models\Sales;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,13 +13,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(30)->active()->create();
-        // Cars::factory(50)->create();
-        Sales::factory(40)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Define roles with their assigned permissions
+        $roles = [
+            'seller',
+            'guest',
+            'super-admin',
+            'buyer',
+
+        ];
+
+        // Create roles
+        foreach ($roles as $name) {
+            $role = Role::create(['name' => $name]);
+        }
+
+        // Create a user with the ssd-admin role
+        $user = User::create([
+            'name' => 'arkan', // Replace with desired name
+            'password' => '12121212', // Replace with a strong password
+            'email' => 'arkan@gmail.com',
+            'phone' => '09123456789',
+            'type' => 'super-admin'
+        ]);
+
+        $user->assignRole('super-admin');
     }
 }
